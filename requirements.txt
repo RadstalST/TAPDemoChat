@@ -1,0 +1,11 @@
+kaggle
+python-dotenv
+streamlit
+langchain
+openai
+streamlit
+streamlit-chat
+watchdog
+pytest
+chromadb
+tiktoken
