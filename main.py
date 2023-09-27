@@ -10,7 +10,7 @@ st.text("This is a demo of the Med Bot")
 st.warning("example: Is there any specific treatment for bronchiolitis?")
 
 
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_lang_agent():
     return lang.LangAgent(path="./.datalake/HC_DATA/prepared_generated_data_for_nhs_uk_conversations.csv")
 

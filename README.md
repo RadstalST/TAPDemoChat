@@ -44,3 +44,32 @@ streamlit run main.py
 >```
 >python -m streamlit run main.py
 >```
+
+
+# Goals
+1. use LLM to generate response
+2. Response Generation Frame
+
+
+# Tasks
+1. [ ] create and share folder on onedrive 
+    - [ ] slides 
+2. [ ] system archecture
+    - [ ] pipeline 
+3. [ ] demo of the whole proces without external DB
+4. [ ] number of diff frame
+
+
+save
+```json
+{
+    "problem":str,
+    "prompt":str,
+    "task":str (GPT4, GPT4withTOT, GPT4withDB)
+    "response":str,
+    "feedback": str,
+    "timestamp and metadata": {}
+    
+}
+
+```

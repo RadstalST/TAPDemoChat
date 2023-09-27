@@ -88,6 +88,7 @@ class LangAgent:
         
     
     def ask(self, input: str):
+        # ask with DB
         qa_chain = ConversationalRetrievalChain.from_llm(
             ChatOpenAI(temperature=0),# ok
             retriever=self.vectorstore.as_retriever(), # ok
@@ -99,6 +100,10 @@ class LangAgent:
             )
         result = qa_chain({"question": input})
         return result
+    
+    def askWithToT(question:str)->dict():
+        
+        return dict()
 
 
 
