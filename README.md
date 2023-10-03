@@ -17,6 +17,8 @@ brew install git-lfs
 ```
 windows
 >I dont have any/ to be added
+4. Chatbot requirement 
+>To run chat bot with openai all the needed requirement are in requirement file
 
 # init
 1. copy .env.example to .env
@@ -39,6 +41,10 @@ sh init.sh
 ```python
 streamlit run main.py
 ```
+
+>To run chatbot with openai
+>```
+>streamlit run chatbot.py
 
 >for certain someone with bash difficulties
 >```
