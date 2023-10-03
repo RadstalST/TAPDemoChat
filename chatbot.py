@@ -9,7 +9,18 @@ from langchain.chains.conversation.memory import (
 )
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+from dotenv import load_dotenv
+
+# load environment variables from .env files
+load_dotenv()
+
+# get the key 
+api_key = os.environ.get("OPENAI_API_KEY","")
+
+# checking if the api key is set or not
+if not api_key:
+    st.error("API key is not set. Please set it as an environment variable.")
+    st.stop
 
 # store session of converstation history with chatbot
 if 'conversation' not in st.session_state:
@@ -26,6 +37,11 @@ if 'API_Key' not in st.session_state:
 # Setting page title and header
 st.set_page_config(page_title="Health care assistance", page_icon=":robot_face:")
 st.markdown("<h1 style='text-align: center;'>How can I assist you? </h1>", unsafe_allow_html=True)
+
+# for having the different select box option
+tasktype_option = st.selectbox(
+    'Please select the action to be performed?',
+    ('summary', 'speech to text', 'embedding'))
 
 
 def getresponse(userInput, api_key, system_role=None):
@@ -55,8 +71,9 @@ def getresponse(userInput, api_key, system_role=None):
 
     return response
 
-container = st.container() # for user input
 response_container = st.container() # for displaying response
+container = st.container() # for user input
+
 
 
 with container:

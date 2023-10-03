@@ -1,6 +1,7 @@
 ### project specific ###
 .datalake
 .chroma_db
+.env
 
 
 
