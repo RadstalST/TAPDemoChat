@@ -38,6 +38,9 @@ if 'API_Key' not in st.session_state:
 st.set_page_config(page_title="Health care assistance", page_icon=":robot_face:")
 st.markdown("<h1 style='text-align: center;'>How can I assist you? </h1>", unsafe_allow_html=True)
 
+# setting up the siderbar
+st.sidebar.title("History")
+
 # for having the different select box option
 tasktype_option = st.selectbox(
     'Please select the action to be performed?',
@@ -47,7 +50,7 @@ tasktype_option = st.selectbox(
 def getresponse(userInput, api_key, system_role=None):
     if st.session_state['conversation'] is None:
         llm = OpenAI(
-            temperature=0,  # You can adjust this temperature if needed
+            temperature=0,  # can adjust the temperature as needed
             openai_api_key=api_key,
             model_name='gpt-3.5-turbo'
         )
