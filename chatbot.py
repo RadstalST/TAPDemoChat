@@ -61,14 +61,6 @@ def getresponse(userInput, api_key, system_role=None):
             memory=ConversationSummaryMemory(llm=llm)
         )
 
-    # Check for medical keywords and set the system role accordingly
-    medical_keywords = ['headache', 'pain', 'doctor', 'medical']
-    if any(keyword in userInput.lower() for keyword in medical_keywords):
-        system_role = 'doctor' 
-    
-    if system_role:
-        userInput = f"{system_role}: {userInput}"
-
     response = st.session_state['conversation'].predict(input=userInput)
     print(st.session_state['conversation'].memory.buffer)
 
@@ -76,8 +68,6 @@ def getresponse(userInput, api_key, system_role=None):
 
 response_container = st.container() # for displaying response
 container = st.container() # for user input
-
-
 
 with container:
     with st.form(key='my_form', clear_on_submit=True):
