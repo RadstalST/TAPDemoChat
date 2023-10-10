@@ -102,7 +102,12 @@ class LangAgent:
         return result
     
     def askWithToT(question:str)->dict():
+        # ask with TOT model
         
+        return dict()
+    
+    def askRaw(question:str)->dict():
+        # the normal ask with raw text
         return dict()
 
 
