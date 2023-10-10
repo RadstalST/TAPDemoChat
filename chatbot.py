@@ -96,3 +96,29 @@ with container:
                         message(st.session_state['messages'][i], is_user=True, key=str(i) + '_user')
                     else:
                         message(st.session_state['messages'][i], key=str(i) + '_AI')
+
+# feedback form
+with st.container():
+    st.write("---")
+    st.header("We would love to hear from you!")
+    st.write("##")
+
+    # Refer: https://formsubmit.co/
+    feedback_form = """
+    <form action="https://formsubmit.co/6d5189f5e008a3398f3c9b2bfee1a576" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Write your feedback here" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    """
+
+    st.markdown(feedback_form, unsafe_allow_html=True)
+
+# Use custom CSS
+def load_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+load_css("style/style.css")
