@@ -64,7 +64,7 @@ streamlit run main.py
     - [ ] pipeline 
 3. [ ] demo of the whole proces without external DB
 4. [ ] number of diff frame
-
+5. [ ] auth 
 
 save
 ```json
