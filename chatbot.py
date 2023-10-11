@@ -7,50 +7,32 @@ from langchain.chains.conversation.memory import (
     ConversationSummaryMemory,
     ConversationBufferWindowMemory,
 )
-
 import os
-from dotenv import load_dotenv
+import datetime 
 
-# load environment variables from .env files
-load_dotenv()
+os.environ["OPENAI_API_KEY"] = "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"
 
-# get the key 
-api_key = os.environ.get("OPENAI_API_KEY","")
-
-# checking if the api key is set or not
-if not api_key:
-    st.error("API key is not set. Please set it as an environment variable.")
-    st.stop
-
-# store session of converstation history with chatbot
+# Store session of conversation history with chatbot
 if 'conversation' not in st.session_state:
     st.session_state['conversation'] = None
 
-# keeps track of chat messages
+# Keep track of chat messages
 if 'messages' not in st.session_state:
     st.session_state['messages'] = []
 
-# store api key session
+# Store API key session
 if 'API_Key' not in st.session_state:
     st.session_state['API_Key'] = ''
 
-# Setting page title and header
-st.set_page_config(page_title="Health care assistance", page_icon=":robot_face:")
-st.markdown("<h1 style='text-align: center;'>How can I assist you? </h1>", unsafe_allow_html=True)
+# Store conversation history
+if 'conversation_history' not in st.session_state:
+    st.session_state['conversation_history'] = []
 
-# setting up the siderbar
-st.sidebar.title("History")
-
-# for having the different select box option
-tasktype_option = st.selectbox(
-    'Please select the action to be performed?',
-    ('summary', 'speech to text', 'embedding'))
-
-
+# Function to get the chatbot response
 def getresponse(userInput, api_key, system_role=None):
     if st.session_state['conversation'] is None:
         llm = OpenAI(
-            temperature=0,  # can adjust the temperature as needed
+            temperature=0,  # You can adjust this temperature if needed
             openai_api_key=api_key,
             model_name='gpt-3.5-turbo'
         )
@@ -58,16 +40,47 @@ def getresponse(userInput, api_key, system_role=None):
         st.session_state['conversation'] = ConversationChain(
             llm=llm,
             verbose=True,
-            memory=ConversationSummaryMemory(llm=llm)
+            memory=ConversationBufferWindowMemory(llm=llm, k=10)
         )
+    
+    # getting current date and time and storing it in session
+    current_time = datetime.datetime.now().strftime("%b %d %I:%M %p")
+    user_input_date_time = f"{current_time} - {userInput}" # adding date and time on user input prompt
+    response = st.session_state['conversation'].predict(input=user_input_date_time)
+    st.session_state['conversation_history'].append((user_input_date_time, response))
 
-    response = st.session_state['conversation'].predict(input=userInput)
-    print(st.session_state['conversation'].memory.buffer)
+    # Looking at history in the console
+    print("Conversation History:")
+    for user_input, model_response in st.session_state['conversation_history']:
+        print(f"User: {user_input}")
 
     return response
 
-response_container = st.container() # for displaying response
-container = st.container() # for user input
+# Function to start a new chat
+def start_new_chat():
+    if 'messages' in st.session_state:
+        st.session_state['messages'] = []  # Clear chat messages
+    # Sidebar to display conversation history
+
+# Setting page title and header
+st.set_page_config(page_title="Healthcare Assistance", page_icon=":robot_face:")
+st.markdown("<h1 style='text-align: center;'>How can I assist you? </h1>", unsafe_allow_html=True)
+
+# Add a "New Chat" button to the sidebar
+st.sidebar.button("New Chat", on_click=start_new_chat)
+
+# showing history on siderbar
+st.sidebar.subheader("Conversation History")
+for i, (user_input, model_response) in enumerate(st.session_state['conversation_history']):
+    #st.sidebar.markdown(f"**User {i + 1}:** {user_input}")
+    st.sidebar.markdown(f"{user_input}")
+
+tasktype_option = st.selectbox(
+    'Please select the action to be performed?',
+    ('summary', 'speech to text', 'embedding'), key=1)
+
+response_container = st.container()  # for displaying response
+container = st.container()  # for user input
 
 with container:
     with st.form(key='my_form', clear_on_submit=True):
