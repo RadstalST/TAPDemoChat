@@ -17,7 +17,9 @@ def playGroundBotSelector(option:str)->PlaygroundBot.BasePlaygroundBot:
 
 
 
-
+st.header("Welcome to Playground")
+st.write("This is a demo of the Med Bot")
+st.warning("if you are editing the code in modules, please restart the app or press 'c' (clear resource cache) to see the changes")
 questionPane = st.container()
 st.divider()
 formPane = st.container()

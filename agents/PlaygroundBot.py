@@ -1,9 +1,20 @@
 
 
 import os
-from langchain.chat_models import ChatOpenAI
+
 from langchain.chains import ConversationChain
-import streamlit as st 
+from langchain.chat_models import ChatOpenAI
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import Chroma
+from langchain.chains import ConversationalRetrievalChain
+from langchain.chains.qa_with_sources.retrieval import RetrievalQAWithSourcesChain
+# from
+from langchain.prompts import PromptTemplate
+from langchain.document_loaders.csv_loader import CSVLoader
+from langchain.memory import ConversationSummaryBufferMemory
+import streamlit as st
+from . import utils
 
 class BasePlaygroundBot():
     """
@@ -38,7 +49,7 @@ class BasePlaygroundBot():
         """
         self.llm = ChatOpenAI(temperature=0, model_name=model_name)
         self.description = "Blank Description"
-    def ask(self,question:str)->str:
+    def ask(self,question:str)->dict:
         """
         Asks the bot a question or gives it a prompt and returns the bot's response.
 
@@ -282,7 +293,7 @@ class PlayGroundGPT4CoTChroma(BasePlaygroundBot):
     display(elem, result):
         Displays the bot's response in the specified element.
     """
-    def __init__(self, model_name="gpt-4") -> None:
+    def __init__(self, model_name="gpt-4",path: str = "./.datalake/HC_DATA/prepared_generated_data_for_nhs_uk_conversations.csv") -> None:
         """
         Initializes a new instance of the PlayGroundGPT4CoTChroma class.
 
@@ -293,8 +304,44 @@ class PlayGroundGPT4CoTChroma(BasePlaygroundBot):
         """
         super().__init__(model_name=model_name)
         self.chain = ConversationChain(llm=self.llm)
-        self.description = "CoTChroma"
-    def ask(self, prompt: str) -> str:
+        self.description = "At its core, CoT prompting is about guiding the LLM to think step by step. This is achieved by providing the model with a few-shot exemplar that outlines the reasoning process. The model is then expected to follow a similar chain of thought when answering the prompt. \n Added vector database retrival of the source"
+        self.template = """Use the following pieces of context to answer the question at the end. 
+        If you don't know the answer, just say that you don't know, don't try to make up an answer. 
+        Use three sentences maximum and keep the answer as concise as possible. 
+        Always gives the answer in your own words, do not copy and paste from the context.
+        Always give the reference to the source of the answer as links found from the context.
+        response in markdown format
+        HISTORY:
+        {chat_history}
+        QUESTION: 
+        {question}
+        Helpful Answer for a concerned clinic visitor :"""
+        self.QA_CHAIN_PROMPT = PromptTemplate.from_template(self.template)
+        self.llm = ChatOpenAI(temperature=0)
+
+    
+        if "memory" not in st.session_state: # if memory is not initialized
+            st.session_state.memory = ConversationSummaryBufferMemory(
+            llm=self.llm,
+            memory_key='chat_history', return_messages=True, output_key='answer'
+            )
+            
+        self.memory = st.session_state.memory
+
+        if not os.path.exists("./.chroma_db"):
+            loader = CSVLoader(file_path=path,csv_args={"quotechar": '"'})
+            documents = loader.load_and_split()
+            self.vectorstore = Chroma.from_documents(
+                documents=documents, 
+                embedding=OpenAIEmbeddings(),
+                persist_directory="./.chroma_db",
+                
+                )
+        else:
+            self.vectorstore = Chroma(embedding_function=OpenAIEmbeddings(),persist_directory="./.chroma_db")
+
+        
+    def ask(self, prompt: str) -> dict:
         """
         Asks the bot a question or gives it a prompt and returns the bot's response.
 
@@ -308,7 +355,19 @@ class PlayGroundGPT4CoTChroma(BasePlaygroundBot):
         str
             The bot's response to the prompt or question.
         """
-        return self.chain(prompt)
+        qa_chain = ConversationalRetrievalChain.from_llm(
+            ChatOpenAI(temperature=0),# ok
+            retriever=self.vectorstore.as_retriever(), # ok
+            condense_question_prompt = self.QA_CHAIN_PROMPT, # ok
+            # chain_type_kwargs={"prompt": self.QA_CHAIN_PROMPT,"verbose":True},
+            memory=self.memory,
+            return_source_documents=True,
+            verbose=True,
+            )
+        result = qa_chain({"question": prompt})
+        return result
+        
+
     def display(self,elem,result):
         """
         Displays the bot's response in the specified element.
@@ -320,7 +379,15 @@ class PlayGroundGPT4CoTChroma(BasePlaygroundBot):
         result : dict
             A dictionary containing the bot's response.
         """
-        elem.write(result["response"])
+
+        with elem:
+            st.write(result["answer"])
+            for i,source in enumerate(result["source_documents"]):
+                with st.expander(f"Source #{i+1}",expanded=True if i==0 else False):
+                    for chat in utils.split_document_chat(source.page_content):
+                        role = chat["who"]
+                        message = chat["message"]
+                        elem.markdown(f"**{role.upper()}** {message}")
 
 
 
