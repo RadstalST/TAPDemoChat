@@ -1,7 +1,29 @@
 import streamlit as st
 from langchain.prompts import PromptTemplate
+from agents import PlaygroundBot
+@st.cache_resource
+def playGroundBotSelector(option:str)->PlaygroundBot.BasePlaygroundBot:
+    match option:
+        case "GPT4":
+            return PlaygroundBot.PlayGroundGPT4()
+        case "GPT4+ToT":
+            return PlaygroundBot.PlayGroundGPT4ToT()
+        case "GPT4+CoT":
+            return PlaygroundBot.PlayGroundGPT4CoT()
+        case "GPT+CoT+Chroma":
+            return PlaygroundBot.PlayGroundGPT4CoTChroma()
+        case _:
+            return PlaygroundBot.BasePlaygroundBot()     
+
+
+
 
 questionPane = st.container()
+st.divider()
+formPane = st.container()
+resultContainer = st.container()
+
+
 
 if getattr(st.session_state, 'status', None) is None:
     st.session_state['status'] = {}
@@ -16,13 +38,19 @@ prompt_template = PromptTemplate.from_template(
                     '''"""
                 ) 
 generated_prompt = ""
+playgroundbot = PlaygroundBot.BasePlaygroundBot() # empty model
+
 
 with questionPane:
     final_prompt = ""
     with st.container() as form:
         option = st.selectbox("bot option",('GPT4', 'GPT4+ToT', 'GPT4+CoT',"GPT+CoT+Chroma"))
-        with st.expander("description"):
-            st.write("This is a description")
+
+        playgroundbot = playGroundBotSelector(option)
+               
+
+        with st.expander("description",expanded=True):
+            st.write(playgroundbot.getDescription())
     
         col1, col2 = st.columns(2)
         with col1: 
@@ -30,6 +58,7 @@ with questionPane:
             userInput = st.text_area(
                 "Your input goes here:", 
                 placeholder="I have problem with headache today. I worked 10 hours yesterday",
+                value="I have problem with headache today. I worked 10 hours yesterday",
                 key='input',
                 height=300)
         with col2:
@@ -49,18 +78,22 @@ with questionPane:
             generated_prompt = prompt_template.format(userInput=userInput, prompt=final_prompt)
             
             # st.write(form.__dict__)
-            
+with formPane:        
+    with st.form("playground_form"):
+        st.markdown(generated_prompt)
+
+        submit_button = st.form_submit_button(label='Send')
+        if submit_button:
+            with st.spinner('Wait for it...'):
+                result = playgroundbot.ask(generated_prompt)
+            resultContainer.subheader("Bot Response")
+            playgroundbot.display(resultContainer,result)
+
+            with resultContainer.expander("debug"):
+                st.write(result)
 
 
-        
-st.divider()
-with st.form("playground_form") as form:
-    st.markdown(generated_prompt)
 
-    submit_button = st.form_submit_button(label='Send')
-    if submit_button:
-        st.write(userInput)
-        st.write(prompt)
 
 feedback = st.text_area("your feedback:", key='prompt_output', height=50)
 
