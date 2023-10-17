@@ -89,8 +89,6 @@ class BasePlaygroundBot():
         """
         elem.write("empty bot")
 
-
-
 class PlayGroundGPT4(BasePlaygroundBot):
     """
     A class representing a playground bot that uses the GPT-4 model.
@@ -285,7 +283,12 @@ class PlayGroundGPT4CoT(BasePlaygroundBot):
         str
             The bot's response to the prompt or question.
         """
+        # this st.write works because it was called under st.status()
+        st.write("creating plan")
         plan = self.chainPlan.invoke({"problem":prompt})
+        st.write("the plan")
+        st.caption(plan)
+        st.write("getting solution from the plan")
         response = self.chainResponse.invoke({"plan":plan})
         return {
             "response":response,
@@ -400,6 +403,7 @@ class PlayGroundGPT4CoTChroma(BasePlaygroundBot):
             verbose=True,
             )
         result = qa_chain({"question": prompt})
+        result["response"] = result["answer"]
         return result
         
 
@@ -417,8 +421,9 @@ class PlayGroundGPT4CoTChroma(BasePlaygroundBot):
 
         with elem:
             st.write(result["answer"])
-            for i,source in enumerate(result["source_documents"]):
-                with st.expander(f"Source #{i+1}",expanded=True if i==0 else False):
+            with st.expander(f"Sources"):
+                for i,source in enumerate(result["source_documents"]):
+                    st.subheader(f"Sources {i}")
                     for chat in utils.split_document_chat(source.page_content):
                         role = chat["who"]
                         message = chat["message"]
