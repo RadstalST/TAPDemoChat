@@ -465,7 +465,7 @@ def ask(question):
     evaluation_strategy="vote"
 
     #create instance
-    model = OpenAILanguageModel('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', api_model="gpt-3.5-turbo")
+    model = OpenAILanguageModel(os.getenv("OPENAI_API_KEY"), api_model="gpt-3.5-turbo")
     tree_of_thoughts = OptimizedTreeofThoughts(model, search_algorithm)
 
     # input_problem = "using question from Dataset in HuggingFace"
