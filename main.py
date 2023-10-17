@@ -8,6 +8,10 @@ from langchain.chains.conversation.memory import (
     ConversationBufferMemory, ConversationBufferWindowMemory,
     ConversationSummaryMemory)
 from streamlit_chat import message
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 
 load_dotenv()
 
