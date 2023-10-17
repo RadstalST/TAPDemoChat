@@ -9,4 +9,4 @@ watchdog
 pytest
 chromadb
 tiktoken
-pysqlite
+pysqlite3
