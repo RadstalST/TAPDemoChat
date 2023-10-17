@@ -10,7 +10,6 @@ from langchain.chains.conversation.memory import (
 import os
 import datetime 
 
-os.environ["OPENAI_API_KEY"] = "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"
 
 # Store session of conversation history with chatbot
 if 'conversation' not in st.session_state:
