@@ -1,8 +1,31 @@
 import streamlit as st
 from langchain.prompts import PromptTemplate
 from agents import PlaygroundBot
+import io
+import json 
+import datetime
+
+# initialize exportDict in session state
+if  "exportDict" not in st.session_state:
+    st.session_state.exportDict = {
+        "mode":"",
+        "userInput":"",
+        "prompt":"",
+        "response":"",
+        "rawResponse":"",
+        "feedback":"",
+        "timestamp":""
+        }
+  
+if "modeIndex" not in st.session_state:
+    st.session_state.modeIndex = 0
+
+def setTimeStamp():
+    st.session_state.exportDict["timestamp"] = datetime.datetime.now()
+
 @st.cache_resource
 def playGroundBotSelector(option:str)->PlaygroundBot.BasePlaygroundBot:
+    
     match option:
         case "GPT4":
             return PlaygroundBot.PlayGroundGPT4()
@@ -24,7 +47,7 @@ questionPane = st.container()
 st.divider()
 formPane = st.container()
 resultContainer = st.container()
-
+feedbackPane = st.container()
 
 
 if getattr(st.session_state, 'status', None) is None:
@@ -46,8 +69,8 @@ playgroundbot = PlaygroundBot.BasePlaygroundBot() # empty model
 with questionPane:
     final_prompt = ""
     with st.container() as form:
-        option = st.selectbox("bot option",('GPT4', 'GPT4+ToT', 'GPT4+CoT',"GPT+CoT+Chroma"))
-
+        option = st.selectbox("bot option",('GPT4', 'GPT4+ToT', 'GPT4+CoT',"GPT+CoT+Chroma"),index=st.session_state.modeIndex)
+        st.session_state.exportDict["mode"] = option
         playgroundbot = playGroundBotSelector(option)
                
 
@@ -86,17 +109,32 @@ with formPane:
 
         submit_button = st.form_submit_button(label='Send')
         if submit_button:
-            with st.spinner('Wait for it...'):
+            with st.status('Wait for it...',expanded=True):
+                st.session_state.exportDict["userInput"] = userInput # save to export dict
+                st.session_state.exportDict["prompt"] = prompt # save to export dict
+                
+                st.write("getting response from the bot")
                 result = playgroundbot.ask(generated_prompt)
+                st.session_state.exportDict["response"] = result["response"] # save to export dict
+                st.session_state.exportDict["rawResponse"] = result
             resultContainer.subheader("Bot Response")
-            playgroundbot.display(resultContainer,result)
+            playgroundbot.display(resultContainer,st.session_state.exportDict["rawResponse"])
 
             with resultContainer.expander("debug"):
                 st.write(result)
 
+with feedbackPane:
+    feedback = st.text_area("your feedback:", key='feedback', height=50,placeholder="please input feedback with 50 character or more")
+    st.session_state.exportDict["feedback"] = feedback
+    
+    st.download_button(
+        "Download interaction",
+        json.dumps(st.session_state.exportDict, indent=4, sort_keys=True, default=str),
+        file_name="interaction.json",
+        mime="application/json",
+        # disabled=(feedback == "" or len(feedback)<=50),
+        on_click=setTimeStamp
+        )
 
-
-
-feedback = st.text_area("your feedback:", key='prompt_output', height=50)
 
 
