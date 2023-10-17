@@ -2,20 +2,21 @@
 
 import os
 
-from langchain.chains import ConversationChain
+import streamlit as st
+from langchain.chains import ConversationalRetrievalChain, ConversationChain
+from langchain.chains.qa_with_sources.retrieval import \
+    RetrievalQAWithSourcesChain
 from langchain.chat_models import ChatOpenAI
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
-from langchain.chains import ConversationalRetrievalChain
-from langchain.chains.qa_with_sources.retrieval import RetrievalQAWithSourcesChain
+from langchain.memory import ConversationSummaryBufferMemory
 # from
 from langchain.prompts import PromptTemplate
-from langchain.document_loaders.csv_loader import CSVLoader
-from langchain.memory import ConversationSummaryBufferMemory
-import streamlit as st
-from . import utils
 from langchain.schema.output_parser import StrOutputParser
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.vectorstores import Chroma
+
+from . import treeofthoughts, utils
 
 
 class BasePlaygroundBot():
@@ -198,7 +199,7 @@ class PlayGroundGPT4ToT(BasePlaygroundBot):
         str
             The bot's response to the prompt or question.
         """
-        return self.chain(prompt)
+        return {"response":treeofthoughts.ask(prompt)}
 
     def display(self,elem,result):
         """
