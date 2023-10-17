@@ -57,10 +57,10 @@ else:
 
 
 prompt_template = PromptTemplate.from_template(
-                    """'''
-                    userInput: {userInput}
-                    prompt: {prompt}
-                    '''"""
+                    """
+                    \nPrompt: {prompt}
+                    \nUser Input: {userInput}
+                    """
                 ) 
 generated_prompt = ""
 playgroundbot = PlaygroundBot.BasePlaygroundBot() # empty model
@@ -124,17 +124,44 @@ with formPane:
                 st.write(result)
 
 with feedbackPane:
-    feedback = st.text_area("your feedback:", key='feedback', height=50,placeholder="please input feedback with 50 character or more")
-    st.session_state.exportDict["feedback"] = feedback
-    
-    st.download_button(
-        "Download interaction",
-        json.dumps(st.session_state.exportDict, indent=4, sort_keys=True, default=str),
-        file_name="interaction.json",
-        mime="application/json",
-        # disabled=(feedback == "" or len(feedback)<=50),
-        on_click=setTimeStamp
-        )
+
+    # feedback = st.text_area("your feedback:", key='feedback', height=50,placeholder="please input feedback with 50 character or more")
+    # st.session_state.exportDict["feedback"] = feedback
+
+    st.write("---")
+    st.header("We would love to hear from you!")
+    st.write("##")
+
+    # Refer: https://formsubmit.co/
+    feedback_form = """
+    <form action="https://formsubmit.co/6d5189f5e008a3398f3c9b2bfee1a576" method="POST" target="_blank">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Write your feedback here" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    """
+
+    st.markdown(feedback_form, unsafe_allow_html=True)
+
+    st.write("---")
+
+# Use custom CSS
+def load_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+load_css("style/style.css")
+
+st.download_button(
+    "Download interaction",
+    json.dumps(st.session_state.exportDict, indent=4, sort_keys=True, default=str),
+    file_name="interaction.json",
+    mime="application/json",
+    # disabled=(feedback == "" or len(feedback)<=50),
+    on_click=setTimeStamp
+    )
 
 
 
