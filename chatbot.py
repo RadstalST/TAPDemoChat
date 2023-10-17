@@ -1,15 +1,16 @@
-import datetime
-import os
-from dotenv import load_dotenv
 import streamlit as st
+from streamlit_chat import message
 from langchain import OpenAI
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import (
-    ConversationBufferMemory, ConversationBufferWindowMemory,
-    ConversationSummaryMemory)
-from streamlit_chat import message
+    ConversationBufferMemory,
+    ConversationSummaryMemory,
+    ConversationBufferWindowMemory,
+)
+import os
+import datetime 
 
-load_dotenv()
+os.environ["OPENAI_API_KEY"] = "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"
 
 # Store session of conversation history with chatbot
 if 'conversation' not in st.session_state:
