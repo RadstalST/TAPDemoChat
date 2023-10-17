@@ -1,0 +1,660 @@
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   a f t e r   w o r k i n g   f o r   1 0   h o u r s   y e s t e r d a y . 
+ 
+ T h o u g h t s :   
+ 1 .   O n e   p o s s i b l e   s y m p t o m   o f   t h e   u s e r ' s   h e a d a c h e   c o u l d   b e   r e l a t e d   t o   e y e   s t r a i n   d u e   t o   p r o l o n g e d   s c r e e n   t i m e . 
+ 2 .   A n o t h e r   s y m p t o m   c o u l d   b e   m u s c l e', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache after working for 10 hours yesterday.
+
+Thoughts: 
+1. One possible symptom of the user's headache could be related to eye strain due to prolonged screen time.
+2. Another symptom could be muscle
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache after working for 10 hours yesterday.
+
+Thoughts: 
+1. One possible symptom of the user's headache could be related to eye strain due to prolonged screen time.
+2. Another symptom could be muscle', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y   a n d   w o r k e d   1 0   h o u r s   y e s t e r d a y . 
+ O b s e r v a t i o n :   W o r k i n g   f o r   l o n g   h o u r s   c a n   s o m e t i m e s   l e a d   t o   p h y s i c a l   a n d   m e n t a l   e x h a u s t i o n . 
+ O b s e r v a t i o n :   H e a d a c h e s   c a n   b e   c a u s e d   b y   v a r i o u s   f a c t o r s ,   i n c l u d i n g   s t r e s s ,   l a c k   o f', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache today and worked 10 hours yesterday.
+Observation: Working for long hours can sometimes lead to physical and mental exhaustion.
+Observation: Headaches can be caused by various factors, including stress, lack of
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache today and worked 10 hours yesterday.
+Observation: Working for long hours can sometimes lead to physical and mental exhaustion.
+Observation: Headaches can be caused by various factors, including stress, lack of', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y   a n d   w o r k e d   f o r   1 0   h o u r s   y e s t e r d a y . 
+ T h o u g h t s :   T h e   u s e r ' s   h e a d a c h e   c o u l d   b e   a   r e s u l t   o f   v a r i o u s   f a c t o r s   s u c h   a s   s t r e s s ,   l a c k   o f   s l e e p ,   e y e   s t r a i n ,   o r   d e h y d r a t i o n .   I t   i s   i m p o r t a n t   t o', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache today and worked for 10 hours yesterday.
+Thoughts: The user's headache could be a result of various factors such as stress, lack of sleep, eye strain, or dehydration. It is important to
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache today and worked for 10 hours yesterday.
+Thoughts: The user's headache could be a result of various factors such as stress, lack of sleep, eye strain, or dehydration. It is important to', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the reasoning provided:
+
+''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''''
+
+Devise the best possible solution for the task: ["Observation: The user is experiencing a headache after working for 10 hours yesterday.\n\nThoughts:\n1. One possible symptom of the user's headache could be related to eye strain due to prolonged screen time.\n2. Another symptom could be muscle tension"]
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y   a n d   w o r k e d   f o r   a   l o n g   d u r a t i o n   o f   1 0   h o u r s   y e s t e r d a y . 
+ 
+ T h o u g h t s :   
+ -   O n e   p o s s i b l e   s y m p t o m   o f   t h e   u s e r ' s   h e a d a c h e   c o u l d   b e   r e l a t e d   t o   t h e i r   p r o l o n g e d   w o r k   h o u r s . 
+ -   T h e   l o n g   w o r k   h o u r s   c o u l d', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache today and worked for a long duration of 10 hours yesterday.
+
+Thoughts: 
+- One possible symptom of the user's headache could be related to their prolonged work hours.
+- The long work hours could
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache today and worked for a long duration of 10 hours yesterday.
+
+Thoughts: 
+- One possible symptom of the user's headache could be related to their prolonged work hours.
+- The long work hours could', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y   a n d   w o r k e d   f o r   a   l o n g   d u r a t i o n   y e s t e r d a y . 
+ 
+ T h o u g h t s :   
+ -   T h e   u s e r ' s   h e a d a c h e   c o u l d   b e   a   r e s u l t   o f   t h e   l o n g   h o u r s   w o r k e d   y e s t e r d a y . 
+ -   I t   i s   p o s s i b l e   t h a t   t h e   u s e r ' s   h e a d a c h e   i s   u n r e l a t e d   t o', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache today and worked for a long duration yesterday.
+
+Thoughts: 
+- The user's headache could be a result of the long hours worked yesterday.
+- It is possible that the user's headache is unrelated to
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache today and worked for a long duration yesterday.
+
+Thoughts: 
+- The user's headache could be a result of the long hours worked yesterday.
+- It is possible that the user's headache is unrelated to', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y   a n d   w o r k e d   f o r   a   l o n g   d u r a t i o n   y e s t e r d a y . 
+ 
+ T h o u g h t s :   
+ 1 .   I t   i s   p o s s i b l e   t h a t   t h e   h e a d a c h e   i s   a   r e s u l t   o f   t h e   l o n g   w o r k i n g   h o u r s . 
+ 2 .   T h e   u s e r   m a y   b e   e x p e r i e n c i n g   f a t i g u e   o r   s t r e s s   d u e', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache today and worked for a long duration yesterday.
+
+Thoughts: 
+1. It is possible that the headache is a result of the long working hours.
+2. The user may be experiencing fatigue or stress due
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache today and worked for a long duration yesterday.
+
+Thoughts: 
+1. It is possible that the headache is a result of the long working hours.
+2. The user may be experiencing fatigue or stress due', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the reasoning provided:
+
+''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''''
+
+Devise the best possible solution for the task: ["Observation: Prolonged work hours can often lead to physical and mental exhaustion, which may contribute to the user's headache today.\n\nThoughts: \n- It is important to consider other factors that could be causing the headache, such as stress"]
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y   a n d   w o r k e d   f o r   1 0   h o u r s   y e s t e r d a y . 
+ 
+ T h o u g h t s :   
+ -   O n e   p o s s i b l e   s y m p t o m   o f   t h e   h e a d a c h e   c o u l d   b e   r e l a t e d   t o   t h e   l o n g   h o u r s   o f   w o r k . 
+ -   I t   i s   i m p o r t a n t   t o   c o n s i d e r   o t h e r   f a c t o r s   t h a t   c o u l d   c o n t r i b u t e', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache today and worked for 10 hours yesterday.
+
+Thoughts: 
+- One possible symptom of the headache could be related to the long hours of work.
+- It is important to consider other factors that could contribute
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache today and worked for 10 hours yesterday.
+
+Thoughts: 
+- One possible symptom of the headache could be related to the long hours of work.
+- It is important to consider other factors that could contribute', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y   a n d   w o r k e d   f o r   a   l o n g   p e r i o d   o f   t i m e   y e s t e r d a y . 
+ 
+ T h o u g h t s :   
+ -   O n e   p o s s i b l e   s y m p t o m   o f   t h e   h e a d a c h e   c o u l d   b e   r e l a t e d   t o   t h e   l o n g   h o u r s   o f   w o r k . 
+ -   I t   i s   i m p o r t a n t   t o   c o n s i d e r   o t h e r   f a c t o r s   t h a t', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache today and worked for a long period of time yesterday.
+
+Thoughts: 
+- One possible symptom of the headache could be related to the long hours of work.
+- It is important to consider other factors that
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache today and worked for a long period of time yesterday.
+
+Thoughts: 
+- One possible symptom of the headache could be related to the long hours of work.
+- It is important to consider other factors that', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y . 
+ O b s e r v a t i o n :   T h e   u s e r   w o r k e d   1 0   h o u r s   y e s t e r d a y . 
+ O b s e r v a t i o n :   T h e r e   m a y   b e   a   c o r r e l a t i o n   b e t w e e n   t h e   u s e r ' s   h e a d a c h e   a n d   t h e i r   l o n g   w o r k i n g   h o u r s . 
+ 
+ T h o u g h t s :   I t   i s   p o s s i b l e   t h a t   t h e   u s e r', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+'''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''
+Observation: The user is experiencing a headache today.
+Observation: The user worked 10 hours yesterday.
+Observation: There may be a correlation between the user's headache and their long working hours.
+
+Thoughts: It is possible that the user
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    '''. Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: ''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' Observation: The user is experiencing a headache today.
+Observation: The user worked 10 hours yesterday.
+Observation: There may be a correlation between the user's headache and their long working hours.
+
+Thoughts: It is possible that the user', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing '''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''' and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the reasoning provided:
+
+''''
+                    userInput: I have problem with headache today. I worked 10 hours yesterday
+                    prompt: Please provide possible symptom with my problem
+                    ''''
+
+Devise the best possible solution for the task: ['Observation: The user is experiencing a headache today and worked for 10 hours yesterday.\n\nThoughts: \n- One possible symptom of the headache could be related to the long hours of work.\n- It is important to consider other factors that could contribute']
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    . Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    . Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    . Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y . 
+ 
+ T h o u g h t s :   T h e   u s e r   m e n t i o n e d   w o r k i n g   1 0   h o u r s   y e s t e r d a y .   I t   i s   p o s s i b l e   t h a t   t h e   h e a d a c h e   c o u l d   b e   a   r e s u l t   o f   t h e   l o n g   h o u r s   o f   w o r k .   H o w e v e r ,   t h e r e   c o u l d   b e   o t h e r   f a c t o r s   c o n t r i b u t i n g   t o   t h e', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                     and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    
+Observation: The user is experiencing a headache today.
+
+Thoughts: The user mentioned working 10 hours yesterday. It is possible that the headache could be a result of the long hours of work. However, there could be other factors contributing to the
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    . Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: '
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                     Observation: The user is experiencing a headache today.
+
+Thoughts: The user mentioned working 10 hours yesterday. It is possible that the headache could be a result of the long hours of work. However, there could be other factors contributing to the', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                     and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y . 
+ T h o u g h t s :   I t   i s   p o s s i b l e   t h a t   t h e   h e a d a c h e   i s   r e l a t e d   t o   t h e   u s e r ' s   l o n g   w o r k   h o u r s   y e s t e r d a y .   H o w e v e r ,   i t   c o u l d   a l s o   b e   c a u s e d   b y   o t h e r   f a c t o r s   s u c h   a s   d e h y d r a t i o n ,   l a c k   o f   s l e e p ,   o r', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                     and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Given the current state of reasoning: 'O b s e r v a t i o n :   T h e   u s e r   i s   e x p e r i e n c i n g   a   h e a d a c h e   t o d a y . 
+ T h o u g h t s :   T h e   u s e r   m e n t i o n e d   w o r k i n g   1 0   h o u r s   y e s t e r d a y .   I t   i s   p o s s i b l e   t h a t   t h e   h e a d a c h e   i s   a   r e s u l t   o f   t h e   l o n g   h o u r s   w o r k e d .   H o w e v e r ,   t h e r e   c o u l d   b e   o t h e r   f a c t o r s   c o n t r i b u t i n g   t o   t h e   h e a d a c h e   a s', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                     and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the thoughts you've had until now: THE STATES ARE: 
+
+
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    
+Observation: The user is experiencing a headache today.
+Thoughts: The user mentioned working 10 hours yesterday. It is possible that the headache is a result of the long hours worked. However, there could be other factors contributing to the headache as
+
+Devise the next coherent thought that will aid in advancing the reasoning process and achieving a solution to 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    . Assess various scenarios, think unconventionally, anticipate potential challenges, and resolve any outstanding queries. Tap into your mind's full potential and make certain no open questions remain.Write down your observations in format 'Observation:xxxx', then write down your thoughts in format 'Thoughts:xxxx'.
+
+-----------
+Prompt : Given the current state of reasoning: '
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                     Observation: The user is experiencing a headache today.
+Thoughts: The user mentioned working 10 hours yesterday. It is possible that the headache is a result of the long hours worked. However, there could be other factors contributing to the headache as', evaluate its value as a float between 0 and 1, become very pessimistic think of potential adverse risks on the probability of this state of reasoning achieveing 
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                     and DO NOT RESPOND WITH ANYTHING ELSE: OTHER THAN AN FLOAT
+
+-----------
+Prompt : Considering the reasoning provided:
+
+'
+                    
+Prompt: Please provide possible symptom with my problem
+                    
+User Input: I have problem with headache today. I worked 10 hours yesterday
+                    '
+
+Devise the best possible solution for the task: ['Observation: The user is experiencing a headache today.\n\nThoughts: The user mentioned working 10 hours yesterday. It is possible that the headache could be a result of the long hours of work. However, there could be other factors contributing to the']

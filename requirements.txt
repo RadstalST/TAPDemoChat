@@ -9,4 +9,5 @@ watchdog
 pytest
 chromadb
 tiktoken
-pysqlite3-binary
+guidance
+transformers

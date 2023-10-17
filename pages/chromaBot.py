@@ -2,7 +2,6 @@ import streamlit as st
 from agents import lang,utils
 from dotenv import load_dotenv
 
-load_dotenv()
 st.title("Med Bot")
 
 st.text("This is a demo of the Med Bot")
