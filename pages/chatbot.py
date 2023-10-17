@@ -116,7 +116,7 @@ def LoggedIn_Clicked(userName, password):
     if userName == "sara" and password =="sara123":
         st.session_state['loggedIn'] = True
     else:
-         st.session_state['loggedIn'] = False;
+         st.session_state['loggedIn'] = False
          st.error("Invalid user name or password")
 def show_login_page():
     with loginSection:

@@ -15,6 +15,8 @@ from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.memory import ConversationSummaryBufferMemory
 import streamlit as st
 from . import utils
+from langchain.schema.output_parser import StrOutputParser
+
 
 class BasePlaygroundBot():
     """
@@ -243,8 +245,32 @@ class PlayGroundGPT4CoT(BasePlaygroundBot):
             The name of the model to use. Default is "gpt-4".
         """
         super().__init__(model_name=model_name)
-        self.chain = ConversationChain(llm=self.llm)
-        self.description = "CoT"
+        
+        self.planllm = self.llm
+        plan_prompt = PromptTemplate(
+            template= """
+        Come up with a plan to solve the following problem as if you were an experienced doctor.
+        Problem:
+        {problem}
+
+        Come up with plan to research to solve the problem in steps:
+        """, 
+            input_variables=["problem"]
+            )
+        
+        execution_prompt = PromptTemplate(
+            template="""
+            from this plan, tell the patient what they need to.
+            {plan}
+            Helpful Answer for a concerned clinic visitor :
+            """,
+            input_variables=["plan"]
+            )
+        
+        self.chainPlan = plan_prompt | self.llm | StrOutputParser()
+        self.chainResponse = execution_prompt | self.llm | StrOutputParser()
+
+        self.description = "CoT prompting, as introduced in a recent paper, is a method that encourages LLMs to explain their reasoning process."
     def ask(self, prompt: str) -> str:
         """
         Asks the bot a question or gives it a prompt and returns the bot's response.
@@ -259,7 +285,12 @@ class PlayGroundGPT4CoT(BasePlaygroundBot):
         str
             The bot's response to the prompt or question.
         """
-        return self.chain(prompt)
+        plan = self.chainPlan.invoke({"problem":prompt})
+        response = self.chainResponse.invoke({"plan":plan})
+        return {
+            "response":response,
+            "plan":plan,
+            }
     def display(self,elem,result):
         """
         Displays the bot's response in the specified element.
@@ -271,7 +302,11 @@ class PlayGroundGPT4CoT(BasePlaygroundBot):
         result : dict
             A dictionary containing the bot's response.
         """
-        elem.write(result["response"])
+        with elem:
+            with st.expander("Plan"):
+                st.write(result["plan"])
+            
+            st.write(result["response"])
 
 class PlayGroundGPT4CoTChroma(BasePlaygroundBot):
     """
