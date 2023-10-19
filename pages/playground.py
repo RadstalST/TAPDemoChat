@@ -4,6 +4,7 @@ from agents import PlaygroundBot
 import io
 import json 
 import datetime
+from agents import chatHistory
 
 # initialize exportDict in session state
 if  "exportDict" not in st.session_state:
@@ -48,6 +49,13 @@ st.divider()
 formPane = st.container()
 resultContainer = st.container()
 feedbackPane = st.container()
+
+# container for history
+history_container = st.sidebar.container()
+
+# creating an empty list to store conversation history
+if 'conversation_history' not in st.session_state:
+    st.session_state.conversation_history = []
 
 
 if getattr(st.session_state, 'status', None) is None:
@@ -122,6 +130,16 @@ with formPane:
 
             with resultContainer.expander("debug"):
                 st.write(result)
+
+            # adding the user input and bot response to the conversation history
+            user_input = final_prompt
+            response = chatHistory.add_user_input_to_history(user_input, result)
+
+            # Display the updated conversation history in the sidebar
+            with history_container:
+                st.subheader("Conversation History")
+                for entry in st.session_state.conversation_history:
+                    st.write(entry[0])
 
 with feedbackPane:
 
