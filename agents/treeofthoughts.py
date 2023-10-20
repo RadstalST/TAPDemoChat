@@ -134,14 +134,14 @@ class OpenAILanguageModel(AbstractLanguageModel):
         if self.use_chat_api:
             thoughts = []
             for _ in range(k):
-                response = self.openai_api_call_handler(prompt, 50, 0.5, k)
+                response = self.openai_api_call_handler(prompt, 1200, 0.5, k)
                 text = self.openai_choice2text_handler(response.choices[0])
                 thoughts += [text]
                 print(f'thoughts: {thoughts}')
             return thoughts
 
         else:
-            response = self.openai_api_call_handler(prompt, 50, 0.5, k)
+            response = self.openai_api_call_handler(prompt, 1200, 0.5, k)
             thoughts = [self.openai_choice2text_handler(choice) for choice in response.choices]
             return thoughts
 
@@ -216,7 +216,7 @@ class OpenAILanguageModel(AbstractLanguageModel):
 
             prompt = f"Given the following states of reasoning, vote for the best state utilizing an scalar value 1-10:\n{states_text}\n\nVote, on the probability of this state of reasoning achieveing {initial_prompt} and become very pessimistic very NOTHING ELSE"
 
-            response = self.openai_api_call_handler(prompt, 50, 1)
+            response = self.openai_api_call_handler(prompt, 1200, 1)
 
             print(f'state response: {response}')
 
