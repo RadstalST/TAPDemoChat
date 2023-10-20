@@ -13,6 +13,7 @@ if  "exportDict" not in st.session_state:
         "prompt":"",
         "response":"",
         "rawResponse":"",
+        "rating":"",
         "feedback":"",
         "timestamp":""
         }
@@ -47,8 +48,15 @@ questionPane = st.container()
 st.divider()
 formPane = st.container()
 resultContainer = st.container()
+responseFeedbackPane = st.container()
 feedbackPane = st.container()
 
+# Use custom CSS
+def load_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+load_css("style/style.css")
 
 if getattr(st.session_state, 'status', None) is None:
     st.session_state['status'] = {}
@@ -123,10 +131,24 @@ with formPane:
             with resultContainer.expander("debug"):
                 st.write(result)
 
-with feedbackPane:
+with responseFeedbackPane:
 
-    # feedback = st.text_area("your feedback:", key='feedback', height=50,placeholder="please input feedback with 50 character or more")
-    # st.session_state.exportDict["feedback"] = feedback
+    rating = st.slider("How would you rate this response?", 1, 5)
+    st.session_state.exportDict["rating"] = rating
+
+    feedback = st.text_area("Was this response useful?", key='feedback', height=50,placeholder="Please write any feedback you have on this response")
+    st.session_state.exportDict["feedback"] = feedback
+
+    st.download_button(
+        "Download interaction",
+        json.dumps(st.session_state.exportDict, indent=4, sort_keys=True, default=str),
+        file_name="interaction.json",
+        mime="application/json",
+        # disabled=(feedback == "" or len(feedback)<=50),
+        on_click=setTimeStamp
+        )
+
+with feedbackPane:
 
     st.write("---")
     st.header("We would love to hear from you!")
@@ -144,24 +166,6 @@ with feedbackPane:
     """
 
     st.markdown(feedback_form, unsafe_allow_html=True)
-
-    st.write("---")
-
-# Use custom CSS
-def load_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-load_css("style/style.css")
-
-st.download_button(
-    "Download interaction",
-    json.dumps(st.session_state.exportDict, indent=4, sort_keys=True, default=str),
-    file_name="interaction.json",
-    mime="application/json",
-    # disabled=(feedback == "" or len(feedback)<=50),
-    on_click=setTimeStamp
-    )
 
 
 
